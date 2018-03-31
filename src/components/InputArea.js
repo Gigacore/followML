@@ -81,7 +81,7 @@ class InputArea extends Component {
                 type="textarea"
                 onKeyPress={this._onkeyPressOne}
                 ref={input => this.__firstAnswer = input}
-                placeholder="Enter your follow-up question. Minimum 4 words."
+                placeholder="Add a follow-up question. Minimum 4 words."
                 autoFocus
                 min={4}
               />
@@ -94,7 +94,7 @@ class InputArea extends Component {
                 type="textarea"
                 onKeyPress={this._onkeyPressTwo}
                 ref={input => this.__secondAnswer = input}
-                placeholder="Enter your follow-up question. Minimum 2 words."
+                placeholder="Add another follow-up question. Minimum 2 words."
                 min={4}
               />
           </div>

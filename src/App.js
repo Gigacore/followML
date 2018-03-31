@@ -22,6 +22,7 @@ class App extends Component {
 
     return [
       <header>
+        <img src="https://s3.amazonaws.com/follow-ml/follow-ML-alpha.png" alt="follow-ml-logo" />
         <h1>followML</h1>
       </header>,
       <div className="wrapper">
