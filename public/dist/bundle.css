@@ -1,0 +1,273 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+hr {
+  border: 2px solid #666; }
+
+body {
+  background: #f5f5f5;
+  color: #000;
+  font-family: 'Roboto', sans-serif;
+  font-size: 36px; }
+
+header {
+  background: #2962ff;
+  padding: 10px; }
+  header h1 {
+    color: #fff;
+    font-size: 18px; }
+
+.wrapper {
+  width: 60%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Noto Serif', serif; }
+  @media only screen and (max-width: 64em) {
+    .wrapper {
+      width: 80%; } }
+  @media only screen and (max-width: 48em) {
+    .wrapper {
+      width: 100%; } }
+  .wrapper .message-area {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-items: center; }
+    @media only screen and (max-width: 64em) {
+      .wrapper .message-area {
+        width: 100%;
+        height: calc(100% - 200px);
+        overflow: hidden;
+        overflow-y: scroll;
+        position: absolute;
+        top: 40px; } }
+    @media only screen and (max-width: 48em) {
+      .wrapper .message-area {
+        width: 100%; } }
+  .wrapper .question-block {
+    padding: 50px 0 20px 0;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 80%;
+    display: none; }
+    .wrapper .question-block.show {
+      display: flex; }
+      @media only screen and (max-width: 64em) {
+        .wrapper .question-block.show {
+          padding: 10px 0; } }
+      @media only screen and (max-width: 48em) {
+        .wrapper .question-block.show {
+          padding: 10px 0; } }
+    .wrapper .question-block .provided-question {
+      font-weight: bold;
+      font-size: 22px;
+      margin: 0 0 25px 0;
+      line-height: 30px;
+      background: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      width: 90%;
+      position: relative; }
+      .wrapper .question-block .provided-question:after {
+        content: "";
+        position: absolute;
+        width: auto;
+        height: auto;
+        left: -14px;
+        bottom: -7px;
+        border-left: 1px solid transparent;
+        border-right: 25px solid transparent;
+        border-top: 25px solid #fff;
+        transform: rotate(45deg); }
+      @media only screen and (max-width: 64em) {
+        .wrapper .question-block .provided-question {
+          font-size: 16px;
+          line-height: 20px;
+          margin: 0 0 5px 0;
+          padding: 20px; } }
+      @media only screen and (max-width: 48em) {
+        .wrapper .question-block .provided-question {
+          font-size: 18px;
+          line-height: 20px; } }
+  .wrapper .answer-block {
+    display: none;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 80%; }
+    .wrapper .answer-block.show {
+      display: flex; }
+      @media only screen and (max-width: 64em) {
+        .wrapper .answer-block.show {
+          margin: 20px 0 0 0; } }
+    .wrapper .answer-block .provided-answer {
+      font-size: 16px;
+      line-height: 24px;
+      text-align: left;
+      width: 85%;
+      background: #eee;
+      padding: 20px 30px 20px;
+      border-radius: 15px;
+      color: #000;
+      position: relative; }
+      .wrapper .answer-block .provided-answer:after {
+        content: "";
+        position: absolute;
+        width: auto;
+        height: auto;
+        right: -14px;
+        bottom: -7px;
+        border-left: 1px solid transparent;
+        border-right: 25px solid transparent;
+        border-top: 25px solid #eee;
+        transform: rotate(45deg); }
+      @media only screen and (max-width: 64em) {
+        .wrapper .answer-block .provided-answer {
+          font-size: 15px;
+          line-height: 17px; } }
+      @media only screen and (max-width: 48em) {
+        .wrapper .answer-block .provided-answer {
+          font-size: 15px;
+          line-height: 17px; } }
+  .wrapper .follow-up-input {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #2196F3;
+    color: #fff; }
+    @media only screen and (max-width: 64em) {
+      .wrapper .follow-up-input {
+        height: 140px; } }
+    @media only screen and (max-width: 48em) {
+      .wrapper .follow-up-input {
+        height: 140px; } }
+    .wrapper .follow-up-input .inputs {
+      display: flex;
+      width: 40%;
+      justify-content: center;
+      align-items: center; }
+      @media only screen and (max-width: 64em) {
+        .wrapper .follow-up-input .inputs {
+          width: 90%; } }
+      @media only screen and (max-width: 48em) {
+        .wrapper .follow-up-input .inputs {
+          width: 90%; } }
+      .wrapper .follow-up-input .inputs fieldset {
+        width: 100%; }
+      .wrapper .follow-up-input .inputs .submit-btn {
+        background: none;
+        border: solid 2px #fff;
+        color: #fff;
+        text-transform: uppercase;
+        height: 90px;
+        padding: 0 10px;
+        margin: 0 0 0 10px;
+        font-weight: bold;
+        opacity: 0.3;
+        pointer-events: none; }
+        .wrapper .follow-up-input .inputs .submit-btn.enabled {
+          opacity: 1;
+          pointer-events: all;
+          cursor: pointer; }
+    .wrapper .follow-up-input .input-area {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      margin: 10px 0; }
+      @media only screen and (max-width: 64em) {
+        .wrapper .follow-up-input .input-area {
+          width: 100%; } }
+      @media only screen and (max-width: 48em) {
+        .wrapper .follow-up-input .input-area {
+          width: 100%; } }
+      .wrapper .follow-up-input .input-area .input-number {
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        padding: 5px;
+        border: solid 1px #fff;
+        border-radius: 100%;
+        height: 20px;
+        width: 20px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 10px 0 0; }
+      .wrapper .follow-up-input .input-area input {
+        width: 100%;
+        height: 20px;
+        font-size: 18px;
+        padding: 10px; }
+        @media only screen and (max-width: 64em) {
+          .wrapper .follow-up-input .input-area input {
+            width: 80%;
+            font-size: 15px; } }
+        @media only screen and (max-width: 48em) {
+          .wrapper .follow-up-input .input-area input {
+            width: 92%;
+            font-size: 15px; } }
+    .wrapper .follow-up-input h3 {
+      width: 38%;
+      font-size: 15px;
+      text-transform: uppercase;
+      padding: 0 0 20px;
+      font-family: 'Roboto', sans-serif;
+      font-weight: bold;
+      display: none; }
+      @media only screen and (max-width: 64em) {
+        .wrapper .follow-up-input h3 {
+          width: 80%; } }
+      @media only screen and (max-width: 48em) {
+        .wrapper .follow-up-input h3 {
+          width: 92%; } }
