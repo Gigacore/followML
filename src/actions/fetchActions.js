@@ -2,7 +2,7 @@ import axios from "axios";
 
 import { FETCH_DATA_FULFILLED, FETCH_DATA_REJECTED } from "../constants/ActionTypes";
 
-const data = "https://s3.amazonaws.com/follow-ml/yrljz.json";
+const data = "";
 
 export const getData = () => (dispatch) => {
   return axios.get(data)
