@@ -4,7 +4,8 @@ import { connect } from "react-redux";
 import { getData } from "./actions/fetchActions";
 
 import ConversationUI from "./components/ConversationUI";
-import StartOver from "./components/StartOver"
+import StartOver from "./components/StartOver";
+import SplashScreen from "./components/SplashScreen";
 
 @connect(store => {
   return {
@@ -50,7 +51,8 @@ class App extends Component {
             </div>
           )
         }
-      </div>
+      </div>,
+      <SplashScreen />
     ];
   }
 }

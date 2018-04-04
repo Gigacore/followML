@@ -10,6 +10,18 @@ import InputArea from "./InputArea";
     super(props)
   }
 
+  componentDidMount() {
+    window.onbeforeunload = function (e) {
+      e = e || window.event;
+
+      if (e) {
+          e.returnValue = 'Sure?';
+      }
+
+      return 'Sure?';
+    };
+  }
+
   render() {
     const { data, count } = this.props;
 
