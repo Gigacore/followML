@@ -54,6 +54,9 @@ body {
   font-family: 'Roboto', sans-serif;
   font-size: 36px; }
 
+strong {
+  font-weight: bold; }
+
 header {
   background: #2962ff;
   height: 40px;
@@ -70,6 +73,97 @@ header {
     font-size: 14px;
     position: absolute;
     right: 20px; }
+
+.splash-screen {
+  background: #f5f5f5;
+  color: #000;
+  font-family: 'Roboto', sans-serif;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  top: 0;
+  border-top: 5px solid #2962ff; }
+  .splash-screen img {
+    width: 150px;
+    margin: 20px 0;
+    min-height: 120px; }
+  @media only screen and (max-width: 64em) {
+    .splash-screen {
+      display: block;
+      position: fixed;
+      overflow-y: scroll; } }
+  .splash-screen.hide {
+    display: none; }
+  .splash-screen .splash-content {
+    width: 60%;
+    font-size: 16px;
+    line-height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: center; }
+    @media only screen and (max-width: 64em) {
+      .splash-screen .splash-content {
+        width: 75%;
+        padding: 30px 0;
+        font-size: 12px; }
+        .splash-screen .splash-content p {
+          line-height: 18px !important; }
+          .splash-screen .splash-content p br {
+            display: none; }
+        .splash-screen .splash-content h2 {
+          line-height: 24px; } }
+    .splash-screen .splash-content .start-now {
+      background: #2962ff;
+      color: #fff;
+      padding: 15px 20px;
+      width: 120px;
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 1px;
+      cursor: pointer;
+      margin: 30px; }
+    .splash-screen .splash-content p {
+      margin: 10px 0;
+      line-height: 22px; }
+      .splash-screen .splash-content p span {
+        border-bottom: dotted 1px; }
+    .splash-screen .splash-content .publications {
+      margin: 30px 0;
+      font-size: 11px; }
+      .splash-screen .splash-content .publications h3 {
+        font-size: 14px;
+        text-transform: uppercase;
+        margin: 0 0 15px 0;
+        border-bottom: dotted 1px;
+        display: inline-block; }
+      .splash-screen .splash-content .publications ol {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center; }
+        .splash-screen .splash-content .publications ol li {
+          margin: 5px 0 0 0;
+          line-height: 11px;
+          font-weight: normal; }
+          .splash-screen .splash-content .publications ol li span {
+            display: flex;
+            margin: 0 0 5px;
+            font-weight: bold; }
+            .splash-screen .splash-content .publications ol li span a {
+              color: #263238; }
+      @media only screen and (max-width: 64em) {
+        .splash-screen .splash-content .publications a {
+          text-decoration: none; } }
+    .splash-screen .splash-content h2 {
+      font-size: 24px;
+      margin: 0 0 30px 0;
+      text-transform: uppercase;
+      font-weight: bold; }
 
 .wrapper {
   font-family: 'Noto Serif', serif; }
