@@ -6,9 +6,12 @@ import InputArea from "./InputArea";
 
  class ConversationUI extends Component {
 
-  render() {
+  constructor(props) {
+    super(props)
+  }
 
-    const { data } = this.props;
+  render() {
+    const { data, count } = this.props;
 
     const randomQuestion = Math.floor(Math.random() * Math.max(data.length));
     const question = data[randomQuestion].Q;
@@ -22,6 +25,7 @@ import InputArea from "./InputArea";
       <InputArea
         question={question}
         answer={answer}
+        count={count}
       />
     ]
   }

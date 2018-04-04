@@ -15,10 +15,7 @@ firebase.initializeApp({
 // Initialize Cloud Firestore through Firebase
 var db = firebase.firestore();
 
-export default function reducer(state = {
-  data: null,
-  status: null
-}, action) {
+export default function reducer(state = {}, action) {
   switch(action.type) {
     case SEND_DATA: {
       db.collection("entry").add({

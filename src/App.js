@@ -7,7 +7,8 @@ import ConversationUI from "./components/ConversationUI";
 
 @connect(store => {
   return {
-    data: store.data
+    data: store.data,
+    count: store.questionCount
   }
 })
 class App extends Component {
@@ -19,18 +20,32 @@ class App extends Component {
   render() {
 
     const { data, status } = this.props.data;
+    const { count } = this.props.count;
 
     return [
       <header>
         <img src="https://s3.amazonaws.com/follow-ml/follow-ML-alpha.png" alt="follow-ml-logo" />
         <h1>followML</h1>
+
+        <div className="counter">
+          {`Set: ${count}/5`}
+        </div>
       </header>,
       <div className="wrapper">
         {
           data === null ? (
-            <p>loading...</p>
+            <div className="loader">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Vector_Loading_fallback.gif" />
+            </div>
           ) : (
-            <ConversationUI data={data} />
+            <div className="main-ui">
+              {count <= 5 ? (
+                <ConversationUI
+                  data={data}
+                  count={count}
+                />
+              ) : null}
+            </div>
           )
         }
       </div>

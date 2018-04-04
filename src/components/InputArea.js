@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 
 import { saveAnswer } from "../actions/saveAnswer";
 import { getData } from "../actions/fetchActions";
+import { countQuestions } from "../actions/questionCount";
 
 @connect(store => {})
 class InputArea extends Component {
@@ -18,14 +19,17 @@ class InputArea extends Component {
 
   _onkeyPressOne = e => {
     if(this.__firstAnswer.value.length >= 4) {
+      e.key === "Enter" ? (
+        this.__secondAnswer.focus()
+      ) : null
+    }
+  }
 
+  _enableSendOne = e => {
+    if(this.__firstAnswer.value.length >= 4) {
       this.setState({
         isDisabled: false
       });
-
-      e.key === "Enter" ? (
-        this.__secondAnswer.focus()
-      ) : null;
     }
   }
 
@@ -60,7 +64,13 @@ class InputArea extends Component {
     followUp2.length > 4 ? this.props.dispatch(saveAnswer(entryTwo)) : null;
     this.__firstAnswer.value = "";
     this.__secondAnswer.value = "";
-    this.props.dispatch(getData());
+
+    if(this.props.count <= 5) {
+      this.props.dispatch(
+        countQuestions(),
+        getData()
+      );
+    }
   }
 
   render() {
@@ -80,6 +90,7 @@ class InputArea extends Component {
               <input
                 type="textarea"
                 onKeyPress={this._onkeyPressOne}
+                onKeyUp={this._enableSendOne}
                 ref={input => this.__firstAnswer = input}
                 placeholder="Add a follow-up question. Minimum 4 words."
                 autoFocus

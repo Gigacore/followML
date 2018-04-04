@@ -2,7 +2,7 @@ import axios from "axios";
 
 import { FETCH_DATA_FULFILLED, FETCH_DATA_REJECTED } from "../constants/ActionTypes";
 
-const data = "";
+const data = "https://api.myjson.com/bins/yrljz";
 
 export const getData = () => (dispatch) => {
   return axios.get(data)
