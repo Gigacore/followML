@@ -41,7 +41,10 @@ class App extends Component {
           ) : (
             <div className="main-ui">
               {count <= 5 ? (
-                  <StartOver />
+                <ConversationUI
+                  data={data}
+                  count={count}
+                />
                 ) : <StartOver />
               }
             </div>
