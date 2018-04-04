@@ -179,14 +179,19 @@ header {
       padding: 120px 0;
       font-size: 22px;
       font-family: 'Roboto', sans-serif; }
+      .wrapper .main-ui .start-over img {
+        height: 150px; }
       .wrapper .main-ui .start-over .start-over-btn {
-        background: #ccc;
-        padding: 10px;
+        padding: 18px;
         text-transform: uppercase;
         margin: 20px 0;
         color: #fff;
         background: #2962ff;
-        cursor: pointer; }
+        cursor: pointer;
+        font-size: 18px; }
+      .wrapper .main-ui .start-over h2 {
+        font-weight: bold;
+        line-height: 40px; }
   .wrapper .loader {
     padding: 150px 0;
     display: flex;

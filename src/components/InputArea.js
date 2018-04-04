@@ -65,6 +65,10 @@ class InputArea extends Component {
     this.__firstAnswer.value = "";
     this.__secondAnswer.value = "";
 
+    this.setState({
+      isDisabled: true
+    })
+
     if(this.props.count <= 5) {
       this.props.dispatch(
         countQuestions(),

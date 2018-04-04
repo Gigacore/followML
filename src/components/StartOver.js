@@ -26,6 +26,7 @@ class StartOver extends Component {
 
     return (
       <div className="start-over">
+        <img src="https://s3.amazonaws.com/follow-ml/thumbs-up.png" />
         <h2>Thanks for your participation!</h2>
         <h2>Would you like to contribute more?</h2>
           <div className="start-over-btn" onClick={() => {this._startAgain()}}>

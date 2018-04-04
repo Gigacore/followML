@@ -29,9 +29,11 @@ class App extends Component {
         <img src="https://s3.amazonaws.com/follow-ml/follow-ML-alpha.png" alt="follow-ml-logo" />
         <h1>followML</h1>
 
-        <div className="counter">
-          {`Set: ${count}/5`}
-        </div>
+        {count <= 5 ? (
+          <div className="counter">
+            {`Set: ${count}/5`}
+          </div>
+        ) : null}
       </header>,
       <div className="wrapper">
         {
