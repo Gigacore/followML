@@ -89,6 +89,26 @@ header {
     display: flex;
     width: 100%;
     justify-content: center;
+
+    .start-over {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      padding: 120px 0;
+      font-size: 22px;
+      font-family: 'Roboto', sans-serif;
+
+      .start-over-btn {
+        background: #ccc;
+        padding: 10px;
+        text-transform: uppercase;
+        margin: 20px 0;
+        color: #fff;
+        background: #2962ff;
+        cursor: pointer;
+      }
+    }
   }
 
   .loader {
@@ -246,11 +266,11 @@ header {
     padding: 10px 0;
 
     @media only screen and (max-width: 64em) {
-      height: 140px;
+      height: 110px;
     }
 
     @media only screen and (max-width: 48em) {
-      height: 140px;
+      height: 110px;
     }
 
     .inputs {

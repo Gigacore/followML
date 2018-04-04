@@ -9,5 +9,6 @@ export const FETCH_DATA_FULFILLED = "FETCH_DATA_FULFILLED";
 export const FETCH_DATA_REJECTED = "FETCH_DATA_REJECTED";
 export const SEND_DATA = "SEND_DATA";
 export const QUESTION_COUNT = "QUESTION_COUNT";
+export const RESET_COUNT = "RESET_COUNT";
 
 /* eslint-enable */

@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import { getData } from "./actions/fetchActions";
 
 import ConversationUI from "./components/ConversationUI";
+import StartOver from "./components/StartOver"
 
 @connect(store => {
   return {
@@ -40,11 +41,9 @@ class App extends Component {
           ) : (
             <div className="main-ui">
               {count <= 5 ? (
-                <ConversationUI
-                  data={data}
-                  count={count}
-                />
-              ) : null}
+                  <StartOver />
+                ) : <StartOver />
+              }
             </div>
           )
         }

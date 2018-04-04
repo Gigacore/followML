@@ -1,4 +1,4 @@
-import { QUESTION_COUNT } from "../constants/ActionTypes";
+import { QUESTION_COUNT, RESET_COUNT } from "../constants/ActionTypes";
 
 export default function reducer(state = {
   count: 1
@@ -8,6 +8,12 @@ export default function reducer(state = {
       return {
         ...state,
         count: state.count + 1
+      }
+      break;
+    case RESET_COUNT:
+      return {
+        ...state,
+        count: 1
       }
   }
 
