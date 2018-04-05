@@ -1,15 +1,10 @@
 import { SEND_DATA } from "../constants/ActionTypes";
+import * as firebase from 'firebase/app';
 
-const firebase = require("firebase");
-// Required for side-effects
 require("firebase/firestore");
 
 firebase.initializeApp({
-  apiKey: 'AIzaSyAjL7in8zCPeMWmnxHgnTc22LUndK1HXyo',
-  authDomain: 'questionanswers-9d5bf.firebaseapp.com',
-  projectId: "questionanswers-9d5bf",
-  storageBucket: "",
-  messagingSenderId: "722781417922"
+
 });
 
 // Initialize Cloud Firestore through Firebase
