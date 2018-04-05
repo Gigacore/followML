@@ -36,9 +36,9 @@ class SplashScreen extends Component {
           <div className="publications">
           <h3><strong>Our Publications:</strong></h3>
           <ol>
-            <li><span><a href="https://dl.acm.org/citation.cfm?id=3136755.3136756" target="_blank">Automatic Assessment of Communication Skill in Non-conventional Interview Settings: A Comparative Study. ICMI 2017</a></span></li>
-            <li><span><a href="http://ieeexplore.ieee.org/abstract/document/8272588/" target="_blank">Online Peer-to-peer Discussions: A Platform for Automatic Assessment of Communication Skill. ACII Workshop 2017</a></span></li>
-            <li><span><a href="https://dl.acm.org/citation.cfm?id=2993183" target="_blank">Asynchronous Video Interviews vs. Face-to-Face Interviews for Communication Skill Measurement: A Systematic Study.</a></span></li>
+            <li><span><a href="https://dl.acm.org/citation.cfm?id=3136755.3136756" target="_blank">Automatic Assessment of Communication Skill in Non-conventional Interview Settings: A Comparative Study. ICMI 2017 > </a></span></li>
+            <li><span><a href="http://ieeexplore.ieee.org/abstract/document/8272588/" target="_blank">Online Peer-to-peer Discussions: A Platform for Automatic Assessment of Communication Skill. ACII Workshop 2017 > </a></span></li>
+            <li><span><a href="https://dl.acm.org/citation.cfm?id=2993183" target="_blank">Asynchronous Video Interviews vs. Face-to-Face Interviews for Communication Skill Measurement: A Systematic Study. > </a></span></li>
           </ol>
           </div>
         </div>
