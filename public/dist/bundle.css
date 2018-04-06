@@ -84,6 +84,62 @@ header {
   display: flex;
   top: 0;
   border-top: 5px solid #2962ff; }
+  @media only screen and (max-width: 64em) {
+    .splash-screen {
+      border-top: none; } }
+  .splash-screen .video-modal {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+    top: 0; }
+    .splash-screen .video-modal.show {
+      display: flex; }
+    .splash-screen .video-modal .video-container {
+      position: relative; }
+      .splash-screen .video-modal .video-container:after {
+        content: 'x';
+        height: 20px;
+        width: 20px;
+        color: #fff;
+        position: absolute;
+        top: -30px;
+        right: -10px;
+        font-weight: normal;
+        font-size: 22px;
+        cursor: pointer; }
+      @media only screen and (max-width: 64em) {
+        .splash-screen .video-modal .video-container {
+          width: 100%; }
+          .splash-screen .video-modal .video-container iframe {
+            width: 100%; }
+          .splash-screen .video-modal .video-container:after {
+            right: 4px; } }
+  .splash-screen .intro-video {
+    font-weight: bold;
+    border-bottom: 1px dotted;
+    margin: 15px 0 0 0;
+    position: relative;
+    left: -5px;
+    font-size: 15px;
+    cursor: pointer; }
+    @media only screen and (max-width: 64em) {
+      .splash-screen .intro-video {
+        font-weight: normal; } }
+    .splash-screen .intro-video:hover:after {
+      margin-left: 4px; }
+    .splash-screen .intro-video:after {
+      content: '';
+      background: url("https://s3.amazonaws.com/follow-ml/assets/play-icon.png") no-repeat;
+      height: 16px;
+      width: 16px;
+      position: absolute;
+      top: 2px;
+      background-size: 80%;
+      margin-left: 2px; }
   .splash-screen img {
     width: 150px;
     margin: 20px 0;
@@ -107,7 +163,7 @@ header {
     text-align: center; }
     @media only screen and (max-width: 64em) {
       .splash-screen .splash-content {
-        width: 80%;
+        width: 85%;
         padding: 5px 0;
         font-size: 12px; }
         .splash-screen .splash-content p {
@@ -127,6 +183,9 @@ header {
       letter-spacing: 1px;
       cursor: pointer;
       margin: 30px; }
+      @media only screen and (max-width: 64em) {
+        .splash-screen .splash-content .start-now {
+          margin: 20px; } }
     .splash-screen .splash-content p {
       margin: 10px 0;
       line-height: 22px; }
