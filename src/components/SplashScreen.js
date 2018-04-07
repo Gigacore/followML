@@ -3,11 +3,21 @@ import { connect } from "react-redux";
 
 import { getData } from "../actions/fetchActions";
 
+import * as firebase from 'firebase/app';
+
+require("firebase/firestore");
+
 class SplashScreen extends Component {
 
   constructor(props) {
     super(props)
   };
+
+  componentDidMount() {
+    const db = firebase.firestore();
+
+    let entries = new Array();
+  }
 
   state = {
     splash: 'show',

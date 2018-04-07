@@ -1,6 +1,14 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 
+import * as firebase from 'firebase/app';
+
+require("firebase/firestore");
+
+firebase.initializeApp({
+
+});
+
 import { getData } from "./actions/fetchActions";
 
 import ConversationUI from "./components/ConversationUI";
@@ -17,6 +25,18 @@ class App extends Component {
 
   componentDidMount() {
     this.props.dispatch(getData());
+
+    const genID = () => {
+      let text = "";
+      const possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+      for (let i = 0; i < 2; i++)
+        text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+      return text.toUpperCase();
+    }
+
+    sessionStorage.setItem('sessionID', Date.now() + genID());
   }
 
   render() {

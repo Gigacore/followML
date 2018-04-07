@@ -310,6 +310,16 @@ header {
       font-size: 22px;
       font-family: 'Roboto', sans-serif;
 
+      .dataset {
+        text-align: center;
+        font-size: 12px;
+        margin: 20px 0;
+
+        a {
+          color: #000;
+        }
+      }
+
       img {
         height: 150px;
       }
@@ -326,7 +336,7 @@ header {
 
       h2 {
         font-weight: bold;
-        line-height: 40px;
+        line-height: 32px;
       }
     }
   }
@@ -359,6 +369,8 @@ header {
       overflow-y: scroll;
       position: absolute;
       top: 40px;
+      display: block;
+      overflow-x: hidden;
     }
 
     @media only screen and (max-width: 48em) {
@@ -378,6 +390,8 @@ header {
 
       @media only screen and (max-width: 64em) {
         padding: 10px 0;
+        width: 90%;
+        margin: 0 auto;
       }
 
       @media only screen and (max-width: 48em) {
@@ -414,6 +428,7 @@ header {
         line-height: 20px;
         margin: 0 0 5px 0;
         padding: 20px;
+        width: 80%;
       }
 
       @media only screen and (max-width: 48em) {
@@ -434,6 +449,11 @@ header {
 
       @media only screen and (max-width: 64em) {
         margin: 20px 0 0 0;
+        width: 90%;
+        margin: 0 auto;
+        width: 84%;
+        right: -10px;
+        position: relative;
       }
     }
 

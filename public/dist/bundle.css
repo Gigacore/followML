@@ -236,6 +236,12 @@ header {
       padding: 120px 0;
       font-size: 22px;
       font-family: 'Roboto', sans-serif; }
+      .wrapper .main-ui .start-over .dataset {
+        text-align: center;
+        font-size: 12px;
+        margin: 20px 0; }
+        .wrapper .main-ui .start-over .dataset a {
+          color: #000; }
       .wrapper .main-ui .start-over img {
         height: 150px; }
       .wrapper .main-ui .start-over .start-over-btn {
@@ -248,7 +254,7 @@ header {
         font-size: 18px; }
       .wrapper .main-ui .start-over h2 {
         font-weight: bold;
-        line-height: 40px; }
+        line-height: 32px; }
   .wrapper .loader {
     padding: 150px 0;
     display: flex;
@@ -272,7 +278,9 @@ header {
         overflow: hidden;
         overflow-y: scroll;
         position: absolute;
-        top: 40px; } }
+        top: 40px;
+        display: block;
+        overflow-x: hidden; } }
     @media only screen and (max-width: 48em) {
       .wrapper .message-area {
         width: 100%; } }
@@ -286,7 +294,9 @@ header {
       display: flex; }
       @media only screen and (max-width: 64em) {
         .wrapper .question-block.show {
-          padding: 10px 0; } }
+          padding: 10px 0;
+          width: 90%;
+          margin: 0 auto; } }
       @media only screen and (max-width: 48em) {
         .wrapper .question-block.show {
           padding: 10px 0; } }
@@ -316,7 +326,8 @@ header {
           font-size: 16px;
           line-height: 20px;
           margin: 0 0 5px 0;
-          padding: 20px; } }
+          padding: 20px;
+          width: 80%; } }
       @media only screen and (max-width: 48em) {
         .wrapper .question-block .provided-question {
           font-size: 18px;
@@ -330,7 +341,12 @@ header {
       display: flex; }
       @media only screen and (max-width: 64em) {
         .wrapper .answer-block.show {
-          margin: 20px 0 0 0; } }
+          margin: 20px 0 0 0;
+          width: 90%;
+          margin: 0 auto;
+          width: 84%;
+          right: -10px;
+          position: relative; } }
     .wrapper .answer-block .provided-answer {
       font-size: 16px;
       line-height: 24px;

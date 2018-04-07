@@ -47,17 +47,20 @@ class InputArea extends Component {
     const { question, answer } = this.props;
     const followUp1 = this.__firstAnswer.value;
     const followUp2 = this.__secondAnswer.value;
+    const sessionID = sessionStorage.getItem('sessionID');
 
     const entryOne = {
       question,
       answer,
-      followUp1
+      followUp1,
+      sessionID
     }
 
     const entryTwo = {
       question,
       answer,
-      followUp2
+      followUp2,
+      sessionID
     }
 
     followUp1.length > 4 ? this.props.dispatch(saveAnswer(entryOne)) : null;

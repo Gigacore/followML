@@ -32,6 +32,12 @@ class StartOver extends Component {
           <div className="start-over-btn" onClick={() => {this._startAgain()}}>
             Start Over
           </div>
+
+          <div className="dataset">
+            <p>Would you like to have a copy of the dataset used?</p>
+            <p>Please get in touch with the below link.</p>
+            <br /><a href="https://goo.gl/forms/2yaQgq1yIz70FTWj1" target="_blank">https://goo.gl/forms/2yaQgq1yIz70FTWj1</a>
+          </div>
       </div>
     );
   }
