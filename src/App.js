@@ -6,11 +6,7 @@ import * as firebase from 'firebase/app';
 require("firebase/firestore");
 
 firebase.initializeApp({
-  apiKey: 'AIzaSyAjL7in8zCPeMWmnxHgnTc22LUndK1HXyo',
-  authDomain: 'questionanswers-9d5bf.firebaseapp.com',
-  projectId: "questionanswers-9d5bf",
-  storageBucket: "",
-  messagingSenderId: "722781417922"
+
 });
 
 import { getData } from "./actions/fetchActions";
