@@ -6,7 +6,7 @@ import * as firebase from 'firebase/app';
 require("firebase/firestore");
 
 firebase.initializeApp({
-
+  projectId: 'questionanswers-9d5bf'
 });
 
 import { getData } from "./actions/fetchActions";
